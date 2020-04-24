@@ -1,0 +1,50 @@
+/* Card Grid */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 1rem;
+    
+}
+
+.grid-title {
+    padding: 1rem;
+    margin-left: 1.5rem;
+}
+
+/* Post Cards */
+
+.card {
+    max-width: 100%;
+    overflow: hidden;
+    background: #f5f8f1;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px rgba(10,10,10,0.4), 5px 8px 10px rgba(10,10,10,0.09);
+}
+
+.card-img-container {
+    width: 100%;
+    overflow: hidden;
+    padding: .3rem;
+    height: 17rem;
+}
+
+.card-img {
+    max-width: 100%;
+}
+
+
+.card-header h5 {
+    color: #ba4280;
+    margin-top: .5rem;
+}
+
+.card-header h4 {
+    color: #a78868;
+    padding-bottom: .5rem;
+}
+
+.card-content {
+    text-align: justify;
+}

@@ -1,0 +1,197 @@
+/*color palette
+#f5f8f1
+#dfb58b
+#938da7
+#ba4280
+#283153 */
+@import 'reset.css';
+@import 'typography.css';
+@import 'home.css';
+@import 'post.css';
+
+/*Main template Global Styles */
+
+body {
+	background: #c8c8c8;
+	color: #283153;
+}
+.container {
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	grid-template-rows: 5rem 1fr 8rem;
+	grid-template-areas:
+		'header header header header'
+		'sidebar main main main'
+		'footer footer footer footer';
+	min-height: 100vh;
+}
+
+a {
+	color: #ba4280;
+	transition: color 0.3s ease-in;
+}
+
+a:visited {
+	color: #938da7;
+}
+
+a:hover {
+	color: #dfb58b;
+}
+
+/*header*/
+
+header {
+	grid-area: header;
+	background: #283153;
+	justify-content: flex-end;
+	padding-right: 3rem;
+	display: flex;
+	align-items: center;
+}
+
+/*Sidebar */
+
+.sidebar {
+	padding-top: 3rem;
+	width: 25%;
+	background: linear-gradient(
+			80deg,
+			rgba(40, 10, 80, 0.8),
+			rgba(80, 10, 80, 0.4)
+		),
+		url(../images/sidebar.jpg) center no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+}
+.sidebar h2 {
+	color: #ba4280;
+}
+
+.sidebar li {
+	padding: 1rem 1.5rem;
+}
+
+#nav-link {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #dfb58b;
+	font-style: bold;
+	transition: all 0.4s ease-in;
+}
+
+#nav-link:visited {
+	color: #938da7;
+}
+
+#nav-link:hover {
+	text-decoration: underline;
+	color: #ba4280;
+}
+
+/*sidebar email form */
+.email-form {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3rem;
+}
+.email-form h3 {
+	font-family: 'Euphoria Script';
+	color: #938da7;
+	text-align: center;
+	font-size: 1.7rem;
+	padding-bottom: 1rem;
+}
+
+.email-input {
+	padding: 0.4rem 0.2rem;
+	border-radius: 15px;
+	outline: none;
+	border: 0.1px #938da7 solid;
+	margin-bottom: 0.8rem;
+}
+
+.email-form button {
+	outline: none;
+	padding: 0.5rem 0.3rem;
+	border: none;
+	background-color: #ba4280;
+	box-shadow: 2px 3px 5px rgba(20, 20, 20, 0.2),
+		4px 6px 9px rgba(20, 20, 20, 0.08),
+		inset 2px 2px 4px rgba(150, 150, 150, 0.2);
+	border-radius: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in;
+	text-transform: uppercase;
+}
+
+.email-form button:hover {
+	background-color: #938da7;
+}
+
+/*Main content area */
+
+main {
+	grid-area: main;
+}
+
+blockquote {
+	background: linear-gradient(45deg, rgba(47, 64, 134, 0.425), rgb(201, 198, 211));
+	padding: 1rem;
+	width: 85%;
+	margin: 1rem auto;
+	border-left: 5px solid #ba4280;
+}
+
+cite {
+	display: block;
+}
+
+/* Footer */
+
+footer {
+	grid-area: footer;
+	background: #938da7;
+	display: flex;
+	align-items: center;
+	color: #283153;
+	font-size: 1.6rem;
+	padding: 0 2rem;
+	justify-content: flex-end;
+}
+
+/*Media Querries */
+@media(max-width: 800px){
+	.container{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		'header'
+		'sidebar'
+		'main'
+		'footer';
+	}
+
+	.sidebar {
+		position: relative;
+		width: 100%;
+	}
+
+	footer {
+		bottom: 0;
+		position: relative;
+	}
+}
+
+@media(max-width: 480px){
+	.home-grid {
+		grid-template-columns: 1fr;
+	}
+}
