@@ -1,12 +1,10 @@
 {
   "name": "bsite",
   "version": "1.0.0",
-  "description": "",
+  "description": "A static blog layout using html and css.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Lauren Thorud",
+  "keywords": ["flexbox", "static", "layout", "css grid"],
+  "license": "CC0-1.0",
+  "homepage": "https://lalaiam.github.io/static-blog-layout"
 }
